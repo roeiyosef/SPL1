@@ -59,12 +59,21 @@ Simulation & Simulation:: operator=(const Simulation& other){
     {
           //const_cast<Plan&>(other.plans[i]).printStatus();
      //     other.plans[i].printStatus();
-     //    this->plans.push_back(Plan(other.plans.at(i)));
-          this->plans.push_back(Plan(i,Settlement("MOSHE " + std::to_string(i),SettlementType::CITY),new NaiveSelection(),facilitiesOptions));
+          this->plans.push_back(Plan(other.plans.at(i)));
+         // this->plans.push_back(Plan(i,Settlement("MOSHE " + std::to_string(i),SettlementType::CITY),new NaiveSelection(),facilitiesOptions));
         // std:: cout << "plans [" + std::to_string(i)+ "]" << std::endl;
-        // this->plans[i].printStatus();
+         
+          //std:: cout << "plans!!!! [" + std::to_string(i)+ "]" << std::endl;
+          this->plans[i].printStatus();
 
     }
+
+    for (int i = 0; i < planCounter; i++)
+    {
+        // std:: cout << "plans [" + std::to_string(i)+ "]" << std::endl;
+         this->plans[i].printStatus();
+    }
+    
 
     for (int i = 0; i < other.settlements.size(); i++)
     {

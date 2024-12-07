@@ -14,7 +14,7 @@ constructionLimit(other.constructionLimit),facilityOptions(other.facilityOptions
 
     this->selectionPolicy = other.selectionPolicy->clone();
     //std:: cout << "this->selectionpolicy : " + selectionPolicy->toString() << std::endl;
-    std:: cout << "this->getNameSettlment : " + this->settlement.getName() << std::endl;
+    //std:: cout << "this->getNameSettlment : " + this->settlement.getName() << std::endl;
     for (int i = 0; i < other.facilities.size(); i++)
     {
         this->facilities.push_back(new Facility(*other.facilities[i]));
@@ -41,7 +41,7 @@ void Plan::step(){
      //    std:: cout << "enetered while planstatus = avaialable " << std::endl;
      //    std:: cout << "settlment name is :  " + (settlement.getName()) << std::endl;
       //   std:: cout << "the plan Scores is : LIFE SCORE: "+ std::to_string(this->life_quality_score)+" ECONOMYSCORE: " +std::to_string(this->economy_score) + " ENIORMENTSCPRE :" +std::to_string(this->environment_score) << std::endl;
-    std:: cout << "facilityoptions size is : " + std::to_string(facilityOptions.size()) << std::endl;
+    //std:: cout << "facilityoptions size is : " + std::to_string(facilityOptions.size()) << std::endl;
         //FacilityType ft = (this->selectionPolicy)->selectFacility(facilityOptions);
      //   std:: cout << "selectedFaciliyType is :  :  " + (ft.toString()) << std::endl;
         this->addFacility(new Facility((this->selectionPolicy)->selectFacility(facilityOptions),this->settlement.getName()));

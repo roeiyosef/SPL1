@@ -158,7 +158,9 @@ void PrintPlanStatus::act(Simulation &simulation) {
         // std::cout <<"setgserger" + std::to_string(simulation.getPlan(planId).getlifeQualityScore()) << std::endl;
         // std::cout << "ewrewrew" + std::to_string(simulation.getPlan(planId).getlifeQualityScore()) << std::endl;
         // p.printStatus();
-        simulation.getPlan(planId).printStatus();
+     //   Plan &p = (simulation.getPlan(planId));
+       // p.printStatus();
+        simulation.plans[planId].printStatus();
         //std:: cout <<"HEYOOOO2"<< std::endl;
         complete();
     }

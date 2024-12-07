@@ -32,11 +32,11 @@ class Simulation {
         Simulation & operator=(const Simulation& other);
         ~Simulation();
         int TESTNUM;
+        vector<Plan> plans;
     private:
         bool isRunning;
         int planCounter; //For assigning unique plan IDs WE MAKING IT PUBLIC 
         vector<BaseAction*> actionsLog;
-        vector<Plan> plans;
         vector<Settlement*> settlements;
         vector<FacilityType> facilitiesOptions;
         string configFilePatht;
